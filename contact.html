@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* NAVBAR */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(13, 110, 253, 0.9);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: white;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #0d6efd, #083d8c);
+            padding: 50px 20px;
+            color: white;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: white;
+            color: #333;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-card span {
+            font-size: 40px;
+        }
+
+        .contact-card h4 {
+            margin: 10px 0;
+            color: #0d6efd;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="booking.html">Rooms</a>
+        <a href="card.html">Booking</a>
+        <a href="contact.html">Contact</a>
+        <a href="docter.html">Doctor</a>
+    </nav>
+
+    <div class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+
+        <div class="contact-cards">
+            <div class="contact-card">
+                <span>📍</span>
+                <h4>Address</h4>
+                <p>Dhaka, Bangladesh</p>
+            </div>
+
+            <div class="contact-card">
+                <span>📞</span>
+                <h4>Phone</h4>
+                <p>+880132556811</p>
+            </div>
+
+            <div class="contact-card">
+                <span>✉️</span>
+                <h4>Email</h4>
+                <p>info@blueskyhotel.com</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
